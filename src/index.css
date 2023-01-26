@@ -1,0 +1,46 @@
+.App{
+  margin: 0 auto;
+  width: 60px;
+  height: 500px;
+  border: solid 1px ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+.div{
+  width: 20px;
+  height:auto;
+  padding-left: 0.5rem;
+  position: relative;
+  text-align: right;
+  margin: 0;
+}
+.div::before{
+  content:  "\2013";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  
+  
+}
+
+.mala{
+  width: 20px;
+  height: auto;
+  padding-left: 0.5rem;
+  position: relative;
+ 
+ 
+}
+.mala::before{
+  content:  "\2011";
+  position: absolute;
+  left: 0px;
+  top: -5px;
+
+  
+  
+}
