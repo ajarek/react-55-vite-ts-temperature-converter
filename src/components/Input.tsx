@@ -5,13 +5,16 @@ type Props = {
 }
 const Input = ({onChange}:Props) => {
   return (
-    <div>
+    <div className='input'>
       <input 
       type="number" 
       onChange={onChange} 
       step={1}
-      placeholder={'Give the steps celsiusa'} 
+      max={100}
+      min={-100}
+      placeholder={'Give the ºC'} 
       />
+      <h1>ºC</h1>
     </div>
   )
 }

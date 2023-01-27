@@ -11,8 +11,11 @@ body {
   margin: 0 auto;
   width: 460px;
   min-height: 100vh;
-  padding: 1rem;
+  padding:2rem 1rem;
   background-color: #f4ea79;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .thermometers {
   width: 100%;
@@ -27,10 +30,11 @@ body {
 }
 .wrapper {
   width: 25px;
-  height: 327px;
-  
+  height: 322px;
+  overflow: hidden;
   position: absolute;
-  bottom: 21%;
+  bottom: 22%;
+  
  
 }
 .wrapper.kel {
@@ -47,15 +51,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: aqua;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  /* border-top-left-radius: 12px;
+  border-top-right-radius: 12px; */
   transition: height 0.5s ease-in-out;
   position: absolute;
   bottom: 0;
 }
 .tank {
   width: 67px;
-  height: 77px;
+  height: 80px;
   border-radius: 50%;
   background-color: aqua;
   position: absolute;
@@ -80,3 +84,38 @@ body {
 .column.far {
   background-color: blue;
 }
+.result{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 2.3rem 0 1rem ;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.input{
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.input input{
+width: 50%;
+height: 40px;
+text-align: center;
+padding:0 1rem;
+font-size: 1.5rem;
+border: solid 1px #f3e009;
+border-radius: 10px;
+outline: none;
+color: yellow;
+background-color: red;
+}
+input::placeholder{
+  color: #f3e009;
+}
+h1{
+  color: red;
+}
+
+
