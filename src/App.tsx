@@ -1,65 +1,42 @@
-
-
+import { useState,createContext } from 'react'
+import Thermometers from './components/Thermometers'
+import Input from './components/Input'
+export type GlobalContent = {
+  kelvin: number
+  setKelvin: (c: number) => void
+  celsius: number
+  setCelsius: (c: number) => void
+  fahrenheit:number
+  setFahrenheit:(c: number) => void
+}
+export const AppContext = createContext<GlobalContent>({
+  kelvin: 0,
+  setKelvin: () => {},
+  celsius:NaN,
+  setCelsius:() => {},
+  fahrenheit:0,
+  setFahrenheit:() => {}
+})
 function App() {
-  
-
+  const [kelvin, setKelvin]=useState(75)
+  const [celsius, setCelsius]=useState(30)
+  const [fahrenheit, setFahrenheit]=useState(25)
+  const changeValue=(e:any)=>{
+    
+    
+    
+    setCelsius(celsius=>celsius=e.target.value)
+  }
+  console.log(celsius);
   return (
     <div className="App">
-     <div className="div">50</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">40</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">30</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">20</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">10</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">0</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">-10</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">-20</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">-30</div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="mala"></div>
-     <div className="div">-40</div>
+      <AppContext.Provider value={{ kelvin, setKelvin, celsius, setCelsius,fahrenheit, setFahrenheit }}>
+    <Thermometers/>
+    <Input
+     onChange={changeValue}
+     
+    />
+    </AppContext.Provider>
     </div>
   )
 }
