@@ -4,6 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --yellow: #f4ea79;
+  --aqua: #00ffff;
+  --crimson: #dc143c;
+  --blue: #0000ff;
+}
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -11,8 +17,8 @@ body {
   margin: 0 auto;
   width: 460px;
   min-height: 100vh;
-  padding:2rem 1rem;
-  background-color: #f4ea79;
+  padding: 2rem 1rem;
+  background-color: var(--yellow);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,8 +40,6 @@ body {
   overflow: hidden;
   position: absolute;
   bottom: 22%;
-  
- 
 }
 .wrapper.kel {
   left: 9.5%;
@@ -50,10 +54,10 @@ body {
 .column {
   width: 100%;
   height: 100%;
-  background-color: aqua;
-  /* border-top-left-radius: 12px;
-  border-top-right-radius: 12px; */
-  transition: height 0.5s ease-in-out;
+  background-color: var(--aqua);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: height 0.7s ease-in-out;
   position: absolute;
   bottom: 0;
 }
@@ -61,7 +65,7 @@ body {
   width: 67px;
   height: 80px;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: var(--aqua);
   position: absolute;
   bottom: 5%;
   left: 4.7%;
@@ -72,50 +76,48 @@ body {
 }
 .tank.cel {
   left: 41.5%;
-  background-color: crimson;
+  background-color: var(--crimson);
 }
 .column.cel {
-  background-color: crimson;
+  background-color: var(--crimson);
 }
 .tank.far {
   left: 78%;
-  background-color: blue;
+  background-color: var(--blue);
 }
 .column.far {
-  background-color: blue;
+  background-color: var(--blue);
 }
-.result{
+.result {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 2.3rem 0 1rem ;
+  padding: 0 2.3rem 0 1rem;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-.input{
+.input {
   margin-top: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.input input{
-width: 50%;
-height: 40px;
-text-align: center;
-padding:0 1rem;
-font-size: 1.5rem;
-border: solid 1px #f3e009;
-border-radius: 10px;
-outline: none;
-color: yellow;
-background-color: red;
+.input input {
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  border: solid 1px var(--yellow);
+  border-radius: 10px;
+  outline: none;
+  color: var(--yellow);
+  background-color: var(--crimson);
 }
-input::placeholder{
-  color: #f3e009;
+input::placeholder {
+  color: var(--yellow);
 }
-h1{
-  color: red;
+h1 {
+  color: var(--crimson);
 }
-
-

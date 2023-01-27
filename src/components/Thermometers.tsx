@@ -1,13 +1,12 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { AppContext } from '../App'
 
 const Thermometers = () => {
-  const { kelvin, setKelvin } = useContext(AppContext)
-  const { celsius, setCelsius } = useContext(AppContext)
-  const { fahrenheit, setFahrenheit } = useContext(AppContext)
+  const { kelvin } = useContext(AppContext)
+  const { celsius } = useContext(AppContext)
+  const { fahrenheit } = useContext(AppContext)
   return (
     <div className='thermometers'>
-      
       <div className='wrapper kel'>
         <div
           className='column kel'
